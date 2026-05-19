@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Dearest Amma — Chiru's Graduation Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --maroon: #8B1818;
+    --maroon-deep: #5C0F0F;
+    --gold: #C9A961;
+    --gold-soft: #E8D9A8;
+    --cream: #FBF7EF;
+    --ink: #2A1A1A;
+    --paper: #FFFDF8;
+    --rose: #B07A7A;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background:
+      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.18), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(139, 24, 24, 0.10), transparent 45%),
+      linear-gradient(135deg, #f7eedb 0%, #ead8b5 100%);
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* ------- Falling flowers background ------- */
+  .petals {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .petal {
+    position: absolute;
+    top: -10vh;
+    font-size: 24px;
+    line-height: 1;
+    user-select: none;
+    will-change: transform, opacity;
+    opacity: 0;
+    filter: drop-shadow(0 2px 4px rgba(139, 24, 24, 0.15));
+    animation-name: petal-fall;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes petal-fall {
+    0%   { transform: translate3d(0, -10vh, 0) rotate(0deg);   opacity: 0; }
+    8%   { opacity: 0.9; }
+    50%  { transform: translate3d(40px, 50vh, 0) rotate(220deg); }
+    92%  { opacity: 0.9; }
+    100% { transform: translate3d(-30px, 115vh, 0) rotate(540deg); opacity: 0; }
+  }
+  @keyframes petal-fall-alt {
+    0%   { transform: translate3d(0, -10vh, 0) rotate(0deg);   opacity: 0; }
+    8%   { opacity: 0.85; }
+    50%  { transform: translate3d(-50px, 55vh, 0) rotate(-180deg); }
+    92%  { opacity: 0.85; }
+    100% { transform: translate3d(35px, 115vh, 0) rotate(-420deg); opacity: 0; }
+  }
+
+  /* Individual petals — varied position, size, speed, delay */
+  .petal:nth-child(1)  { left:  4%; font-size: 22px; animation-duration: 14s; animation-delay:  0s;  }
+  .petal:nth-child(2)  { left: 12%; font-size: 28px; animation-duration: 18s; animation-delay: -3s; animation-name: petal-fall-alt; }
+  .petal:nth-child(3)  { left: 19%; font-size: 18px; animation-duration: 12s; animation-delay: -6s; }
+  .petal:nth-child(4)  { left: 26%; font-size: 26px; animation-duration: 20s; animation-delay: -2s; animation-name: petal-fall-alt; }
+  .petal:nth-child(5)  { left: 33%; font-size: 20px; animation-duration: 16s; animation-delay: -9s; }
+  .petal:nth-child(6)  { left: 41%; font-size: 30px; animation-duration: 22s; animation-delay: -4s; animation-name: petal-fall-alt; }
+  .petal:nth-child(7)  { left: 49%; font-size: 22px; animation-duration: 15s; animation-delay: -7s; }
+  .petal:nth-child(8)  { left: 56%; font-size: 24px; animation-duration: 19s; animation-delay: -1s; animation-name: petal-fall-alt; }
+  .petal:nth-child(9)  { left: 64%; font-size: 18px; animation-duration: 13s; animation-delay: -5s; }
+  .petal:nth-child(10) { left: 71%; font-size: 28px; animation-duration: 21s; animation-delay: -8s; animation-name: petal-fall-alt; }
+  .petal:nth-child(11) { left: 79%; font-size: 22px; animation-duration: 17s; animation-delay: -2s; }
+  .petal:nth-child(12) { left: 86%; font-size: 26px; animation-duration: 14s; animation-delay: -6s; animation-name: petal-fall-alt; }
+  .petal:nth-child(13) { left: 93%; font-size: 20px; animation-duration: 18s; animation-delay: -4s; }
+  .petal:nth-child(14) { left:  8%; font-size: 16px; animation-duration: 23s; animation-delay: -11s; animation-name: petal-fall-alt; }
+  .petal:nth-child(15) { left: 37%; font-size: 16px; animation-duration: 24s; animation-delay: -14s; }
+  .petal:nth-child(16) { left: 68%; font-size: 16px; animation-duration: 25s; animation-delay: -10s; animation-name: petal-fall-alt; }
+  /* Graduation caps, balloons & sparkles in the mix */
+  .petal:nth-child(17) { left: 15%; font-size: 30px; animation-duration: 19s; animation-delay: -3s; }
+  .petal:nth-child(18) { left: 45%; font-size: 32px; animation-duration: 22s; animation-delay: -8s; animation-name: petal-fall-alt; }
+  .petal:nth-child(19) { left: 75%; font-size: 28px; animation-duration: 20s; animation-delay: -12s; }
+  .petal:nth-child(20) { left: 22%; font-size: 26px; animation-duration: 21s; animation-delay: -6s; animation-name: petal-fall-alt; }
+  .petal:nth-child(21) { left: 58%; font-size: 30px; animation-duration: 18s; animation-delay: -2s; }
+  .petal:nth-child(22) { left: 88%; font-size: 26px; animation-duration: 23s; animation-delay: -9s; animation-name: petal-fall-alt; }
+  .petal:nth-child(23) { left: 30%; font-size: 22px; animation-duration: 17s; animation-delay: -13s; }
+  .petal:nth-child(24) { left: 62%; font-size: 22px; animation-duration: 19s; animation-delay: -5s; animation-name: petal-fall-alt; }
+  .petal:nth-child(25) { left:  3%; font-size: 24px; animation-duration: 24s; animation-delay: -15s; }
+  .petal:nth-child(26) { left: 95%; font-size: 24px; animation-duration: 26s; animation-delay: -7s; animation-name: petal-fall-alt; }
+  .petal:nth-child(27) { left: 50%; font-size: 28px; animation-duration: 20s; animation-delay: -16s; }
+  .petal:nth-child(28) { left: 17%; font-size: 20px; animation-duration: 22s; animation-delay: -4s; animation-name: petal-fall-alt; }
+
+  /* Keep the invitation card above the petals */
+  .invitation { z-index: 1; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .petal { animation: none; opacity: 0.25; top: 30%; }
+  }
+
+  .invitation {
+    background: var(--paper);
+    width: 100%;
+    max-width: 740px;
+    position: relative;
+    padding: 80px 64px 64px;
+    box-shadow:
+      0 30px 80px rgba(92, 15, 15, 0.28),
+      0 10px 30px rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* Decorative corner frames */
+  .invitation::before,
+  .invitation::after,
+  .inner-corner-tr,
+  .inner-corner-bl {
+    content: '';
+    position: absolute;
+    width: 86px;
+    height: 86px;
+    border: 2px solid var(--gold);
+    opacity: 0.55;
+  }
+  .invitation::before {
+    content: '';
+    top: 24px; left: 24px;
+    border-right: none;
+    border-bottom: none;
+  }
+  .invitation::after {
+    content: '';
+    bottom: 24px; right: 24px;
+    border-left: none;
+    border-top: none;
+  }
+  .inner-corner-tr {
+    top: 24px; right: 24px;
+    border-left: none;
+    border-bottom: none;
+  }
+  .inner-corner-bl {
+    bottom: 24px; left: 24px;
+    border-right: none;
+    border-top: none;
+  }
+
+  /* Top crest */
+  .crest {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .crest .monogram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border: 3px solid var(--maroon);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 30%, #fff8e7 0%, var(--paper) 60%, #f4e7c8 100%);
+    box-shadow:
+      0 0 0 4px var(--paper),
+      0 0 0 6px var(--gold),
+      0 6px 18px rgba(92, 15, 15, 0.25);
+    position: relative;
+    overflow: hidden;
+    font-size: 48px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .crest .monogram::before,
+  .crest .monogram::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .crest .monogram::before { right: 108px; }
+  .crest .monogram::after { left: 108px; }
+
+  .eyebrow {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.45em;
+    color: var(--maroon);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .salutation {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    color: var(--maroon-deep);
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    color: var(--maroon);
+    font-style: italic;
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 22px 0;
+    gap: 14px;
+  }
+  .divider .line {
+    flex: 0 1 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .divider .ornament {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
+
+  .letter {
+    font-size: 18.5px;
+    line-height: 1.85;
+    color: var(--ink);
+    margin: 8px auto 8px;
+    max-width: 580px;
+    text-align: left;
+    font-weight: 400;
+  }
+  .letter p { margin-bottom: 16px; }
+  .letter p:last-child { margin-bottom: 0; }
+
+  .letter em {
+    color: var(--maroon);
+    font-style: italic;
+  }
+  .letter .lead {
+    font-size: 20px;
+    color: var(--maroon-deep);
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 18px;
+  }
+  .letter .pivot {
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--maroon-deep);
+    margin: 18px 0;
+    font-weight: 500;
+  }
+
+  .ceremony {
+    text-align: center;
+    margin: 26px auto 18px;
+    padding: 28px 24px;
+    background: linear-gradient(to bottom, rgba(201, 169, 97, 0.10), rgba(201, 169, 97, 0.03));
+    border-top: 1px solid var(--gold-soft);
+    border-bottom: 1px solid var(--gold-soft);
+    max-width: 580px;
+  }
+  .ceremony .label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--maroon);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .ceremony .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--maroon-deep);
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .ceremony .school {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--ink);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .ceremony .when {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--ink);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .ceremony .where {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--ink);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .ticket-note {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--maroon);
+    margin: 0 auto 10px;
+    max-width: 540px;
+    line-height: 1.6;
+  }
+
+  .closing {
+    text-align: center;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--gold-soft);
+  }
+  .closing .note {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18.5px;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.75;
+    max-width: 520px;
+    margin: 0 auto 18px;
+  }
+  .signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: var(--maroon-deep);
+    line-height: 1;
+    margin-top: 8px;
+  }
+  .signature-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--maroon);
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+  .with-pranams {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 600px) {
+    .invitation { padding: 56px 24px 44px; }
+    .salutation { font-size: 46px; }
+    .subtitle { font-size: 17px; }
+    .letter { font-size: 16.5px; }
+    .letter .lead { font-size: 18px; }
+    .letter .pivot { font-size: 19px; }
+    .ceremony .title { font-size: 22px; }
+    .ceremony .when { font-size: 18px; }
+    .ceremony .where { font-size: 14.5px; }
+    .signature { font-size: 38px; }
+    .crest .monogram::before,
+    .crest .monogram::after { display: none; }
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .invitation { box-shadow: none; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <div class="petals" aria-hidden="true">
+    <!-- Flowers -->
+    <span class="petal">&#127800;</span>
+    <span class="petal">&#127802;</span>
+    <span class="petal">&#127801;</span>
+    <span class="petal">&#128144;</span>
+    <span class="petal">&#127800;</span>
+    <span class="petal">&#127801;</span>
+    <span class="petal">&#127802;</span>
+    <span class="petal">&#127800;</span>
+    <span class="petal">&#128144;</span>
+    <span class="petal">&#127801;</span>
+    <span class="petal">&#127802;</span>
+    <span class="petal">&#127800;</span>
+    <span class="petal">&#127801;</span>
+    <span class="petal">&#127800;</span>
+    <span class="petal">&#127802;</span>
+    <span class="petal">&#128144;</span>
+    <!-- Graduation caps -->
+    <span class="petal">&#127891;</span>
+    <span class="petal">&#127891;</span>
+    <span class="petal">&#127891;</span>
+    <span class="petal">&#127891;</span>
+    <!-- Balloons -->
+    <span class="petal">&#127880;</span>
+    <span class="petal">&#127880;</span>
+    <span class="petal">&#127880;</span>
+    <!-- Sparkles & confetti -->
+    <span class="petal">&#10024;</span>
+    <span class="petal">&#127881;</span>
+    <span class="petal">&#10024;</span>
+    <span class="petal">&#127942;</span>
+    <span class="petal">&#11088;</span>
+  </div>
+
+  <div class="invitation">
+    <div class="inner-corner-tr"></div>
+    <div class="inner-corner-bl"></div>
+
+    <div class="crest">
+      <div class="monogram">&#127891;</div>
+    </div>
+
+    <div class="eyebrow">A Letter From My Heart</div>
+    <div class="salutation">My Dearest Kalpana Amma</div>
+    <div class="subtitle">— with love, gratitude, and a son's heart —</div>
+
+    <div class="divider">
+      <span class="line"></span>
+      <span class="ornament">&#10086;</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="letter">
+      <p class="lead">
+        There are some people whose love quietly raises us —<br>
+        without asking for thanks, without keeping count —<br>
+        and you, Amma, are one of them.
+      </p>
+
+      <p>
+        When we were far away from home, far away from our mother's kitchen and our family's warmth, you opened your doors and your heart to us. The <em>dosa batters</em> you sent, the <em>curries</em> you packed with so much care, the meals you made sure we never missed — Amma, those weren't just food. They were <em>home</em>. Every spoonful carried your love, your blessings, and the comfort of a mother's hand. On the days we felt the distance from home the most, you made sure we never felt alone.
+      </p>
+
+      <p>
+        You took care of us the way only a mother does — gently, completely, and without ever expecting anything in return. You became our second mother in a country that was new to us, and in doing so, you became one of the reasons I could keep going, keep studying, and keep believing that this day would come.
+      </p>
+
+      <p class="pivot">And now that day is here.</p>
+
+      <p style="text-align: center;">
+        It is with so much love and gratitude that I want you to be a part of this moment with me. I am graduating from <strong style="color: var(--maroon-deep); font-weight: 600;">Stevens Institute of Technology</strong>, and I would be truly blessed if you could come and bless me in person as I walk across the stage.
+      </p>
+    </div>
+
+    <div class="ceremony">
+      <div class="label">&#10022; You are warmly invited &#10022;</div>
+      <div class="title">Graduate Commencement Ceremony</div>
+      <div class="school">Stevens Institute of Technology &middot; Class of 2026</div>
+      <div class="when">Wednesday, May 20, 2026 &middot; 3:00 PM</div>
+      <div class="where">
+        PNC Bank Arts Center<br>
+        116 Garden State Pkwy, Holmdel, NJ 07733
+      </div>
+    </div>
+
+    <p class="ticket-note">
+      I will arrange your ticket and share all the details with you personally.<br>
+      Please just say <em>yes</em>, Amma.
+    </p>
+
+    <div class="divider">
+      <span class="line"></span>
+      <span class="ornament">&#10086;</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="closing">
+      <p class="note">
+        This degree may have my name on it, but a piece of it belongs to <em>you</em> — to your kitchen, to your prayers, and to every meal you fed us with a mother's love. Walking the stage will feel complete only when I look up and see you there.
+      </p>
+      <div class="with-pranams">With all my love and pranams,</div>
+      <div class="signature">Chiru</div>
+      <div class="signature-label">&#10022; &nbsp; your son, always &nbsp; &#10022;</div>
+    </div>
+  </div>
+</body>
+</html>
